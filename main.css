@@ -21,6 +21,24 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.hamburger {
+  color: #10c9c3;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.show {
+  display: flex;
 }
 
 nav img {
@@ -28,18 +46,18 @@ nav img {
   height: 60px;
 }
 
-ul {
+.nav-ul {
   width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-ul li {
+.nav-ul li {
   list-style: none;
 }
 
-ul li a {
+.nav-ul a {
   margin-left: 1rem;
   text-decoration: none;
   color: #000000;
@@ -49,7 +67,7 @@ ul li a {
   font-weight: 600;
 }
 
-ul li:first-child a {
+.nav-ul li:first-child a {
   color: #10c9c3;
 }
 
@@ -350,17 +368,17 @@ ul li:first-child a {
   color: #787878;
 }
 
-.conatct {
+.contact {
   height: 100vh;
   background-color: #f5f5f5;
 }
 
-.conatct h1 {
+.contact h1 {
   text-align: center;
   padding-top: 3rem;
 }
 
-.conatct p {
+.contact p {
   width: 42%;
   text-align: center;
   margin: auto;
@@ -483,4 +501,28 @@ footer a {
 
 .icon a {
   padding-left: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem 0;
+    background-color: #f5f5f5;
+    z-index: 2;
+    border-radius: 10px;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  nav li {
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
