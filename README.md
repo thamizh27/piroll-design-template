@@ -1,1 +1,1 @@
-> Piroll design webpage
+> Piroll design template - static webpage
