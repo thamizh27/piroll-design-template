@@ -10,7 +10,6 @@ body {
 
 /* home content */
 .home {
-  height: 90vh;
   background-color: #e9e9e9;
 }
 
@@ -35,10 +34,6 @@ nav {
 
 .hamburger:focus {
   outline: none;
-}
-
-.show {
-  display: flex;
 }
 
 nav img {
@@ -73,8 +68,8 @@ nav img {
 
 .banner {
   width: 90%;
-  margin: auto;
-  margin-top: 5rem;
+  margin: 5rem auto;
+  padding-bottom: 5rem;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
@@ -121,10 +116,6 @@ nav img {
 }
 
 /* About section */
-.about {
-  height: 50vh;
-}
-
 .about h1 {
   font-size: 2rem;
   letter-spacing: 1px;
@@ -155,7 +146,6 @@ nav img {
 /* work section */
 .work {
   margin-top: 4rem;
-  height: 68vh;
   background-color: #f8f9f9;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -166,6 +156,8 @@ nav img {
   flex-direction: column;
   justify-content: center;
   margin: auto;
+  width: 80%;
+  padding: 6rem 0;
 }
 
 .skills h1 {
@@ -184,9 +176,14 @@ nav img {
 .skill progress {
   margin-bottom: 1.5rem;
   background-color: #d8d8d8;
-  width: 500px;
+  width: 100%;
   height: 3px;
   border-radius: 100%;
+}
+
+.work img {
+  width: 100%;
+  height: 100%;
 }
 
 .work-color {
@@ -195,12 +192,13 @@ nav img {
 }
 
 .works {
-  height: 40vh;
   width: 90%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 6rem 0;
 }
 
 .divs {
@@ -232,7 +230,7 @@ nav img {
 }
 
 .gallery img {
-  width: 315px;
+  width: 100%;
   height: 200px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 19px 0px rgba(50, 50, 50, 0.35);
@@ -277,6 +275,7 @@ nav img {
 }
 
 .video {
+  height: 550px;
   margin: 4rem 0;
   border-radius: 4px;
 }
@@ -324,10 +323,10 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
   background-color: #10c9c3;
   color: #ffffff;
   text-align: center;
+  padding: 8rem 0;
 }
 
 .testimonial-content q {
@@ -346,31 +345,26 @@ nav img {
   font-size: 0.8rem;
 }
 
-.testimonial-content span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  color: #ffffff;
-}
-
 /* Client section */
 .clients {
   width: 90%;
   margin: auto;
-  height: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem 0;
 }
 
 .clients img {
   width: 180px;
   color: #787878;
+  margin: auto;
 }
 
 .contact {
-  height: 100vh;
   background-color: #f5f5f5;
+  padding: 3rem 0;
 }
 
 .contact h1 {
@@ -410,7 +404,7 @@ form div {
 }
 
 form div input {
-  width: 310px;
+  width: 46%;
 }
 
 form textarea {
@@ -452,12 +446,12 @@ footer {
   color: #bcbcbc;
 }
 .footer-container {
-  height: 40vh;
   width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem 0;
 }
 
 footer a {
@@ -483,6 +477,7 @@ footer a {
   width: 200px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-nav a {
@@ -508,10 +503,11 @@ footer a {
     display: none;
     flex-direction: column;
     width: 100%;
-    padding: 5rem 0;
+    padding: 3rem 0;
     background-color: #f5f5f5;
     z-index: 2;
     border-radius: 10px;
+    text-align: center;
   }
 
   .nav-ul.show {
@@ -524,5 +520,90 @@ footer a {
 
   .hamburger {
     display: block;
+  }
+
+  .work {
+    grid-template-columns: 1fr;
+  }
+
+  .work img {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .video {
+    height: 440px;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
+  .banner img {
+    margin: 2rem auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .content button {
+    margin: 2rem 0 auto;
+  }
+
+  .works {
+    padding: 4rem 0;
+  }
+
+  .divs {
+    margin-bottom: 3rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video {
+    height: 330px;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    width: 70%;
+  }
+
+  .footer-content {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .video {
+    height: 220px;
+  }
+
+  .testimonial-content q {
+    font-size: 1rem;
+  }
+
+  form {
+    width: 90%;
   }
 }
