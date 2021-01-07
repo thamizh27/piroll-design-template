@@ -115,6 +115,17 @@ nav img {
   color: #000000;
 }
 
+.up-arrow {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3;
+  text-decoration: none;
+  color: #10c9c3;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
 /* About section */
 .about h1 {
   font-size: 2rem;
